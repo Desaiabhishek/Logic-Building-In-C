@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<conio.h>
+
+void Dispaly(char *str)
+{
+  while( *str != '\0')
+  {
+      if( *str >= 65 && *str <= 90)
+      {
+          *str = *str + 32;
+      }
+      else if( *str >= 97 && *str <= 122)
+      {
+          *str = *str - 32;
+      }
+      else
+      {
+          *str = *str;
+      }
+      *str++;
+  }
+}
+
+int main()
+{
+    char Arr[20];
+
+    printf("\n Enter A String =");
+    scanf("%[^\n]",Arr);
+
+    Dispaly(Arr);
+
+    printf("\n Modified String is %s",Arr);
+
+    getch();
+    return 0;
+}
